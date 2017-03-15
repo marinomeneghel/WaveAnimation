@@ -37,18 +37,25 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             for (int i = 0; i < views.length; i++) {
-                final int finalI = i;
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.waves_animation);
-                        views[finalI].startAnimation(animation);
-                    }
-                }, 300 * finalI);
+                View view = views[i];
+                animate(view, i);
             }
             handler.postDelayed(this, (long) (duration * 3 + stopDelay));
         }
     };
+
+    private void animate(final View view, final int index) {
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                view.startAnimation(loadAnimationFromRes());
+            }
+        }, 300 * index);
+    }
+
+    private Animation loadAnimationFromRes() {
+        return AnimationUtils.loadAnimation(getApplicationContext(), R.anim.waves_animation);
+    }
 
 
 }
