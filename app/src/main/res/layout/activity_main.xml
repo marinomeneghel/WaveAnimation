@@ -12,7 +12,7 @@
     <View
         android:id="@+id/firstView"
         android:layout_width="0dp"
-        android:layout_height="10dp"
+        android:layout_height="100dp"
         android:layout_weight="1"
         android:layout_margin="2dp"
         android:background="@color/colorAccent" />
@@ -20,7 +20,7 @@
     <View
         android:id="@+id/secondView"
         android:layout_width="0dp"
-        android:layout_height="10dp"
+        android:layout_height="100dp"
         android:layout_weight="1"
         android:layout_margin="2dp"
         android:background="@color/colorAccent" />
@@ -28,7 +28,7 @@
     <View
         android:id="@+id/thirdView"
         android:layout_width="0dp"
-        android:layout_height="10dp"
+        android:layout_height="100dp"
         android:layout_weight="1"
         android:layout_margin="2dp"
         android:background="@color/colorAccent" />
@@ -36,7 +36,7 @@
     <View
         android:id="@+id/fourthView"
         android:layout_width="0dp"
-        android:layout_height="10dp"
+        android:layout_height="100dp"
         android:layout_weight="1"
         android:layout_margin="2dp"
         android:background="@color/colorAccent" />
@@ -44,7 +44,7 @@
     <View
         android:id="@+id/fifthView"
         android:layout_width="0dp"
-        android:layout_height="10dp"
+        android:layout_height="100dp"
         android:layout_weight="1"
         android:layout_margin="2dp"
         android:background="@color/colorAccent" />
