@@ -11,11 +11,12 @@ import android.widget.LinearLayout;
 
 public class SegmentedProgressView extends LinearLayout {
 
+    private static final long PHASE_SHIFT = 100;
+    private static final long DURATION = 400;
+    private static final long STOP_DELAY = 1400;
+
     private final Handler handler;
     private View[] bars;
-    private long phaseShift = 100;
-    private long duration = 400;
-    private long stopDelay = 1400;
 
     public SegmentedProgressView(Context context) {
         super(context);
@@ -49,7 +50,7 @@ public class SegmentedProgressView extends LinearLayout {
     }
 
     public void startAnimation() {
-        handler.postDelayed(runnable, duration * 3);
+        handler.postDelayed(runnable, DURATION * 3);
     }
 
     private void animate(final View view, final int index) {
@@ -58,7 +59,7 @@ public class SegmentedProgressView extends LinearLayout {
             public void run() {
                 view.startAnimation(loadAnimationFromRes());
             }
-        }, phaseShift * index);
+        }, PHASE_SHIFT * index);
     }
 
     private Animation loadAnimationFromRes() {
@@ -72,7 +73,7 @@ public class SegmentedProgressView extends LinearLayout {
                 View view = bars[i];
                 animate(view, i);
             }
-            handler.postDelayed(this, duration * 3 + stopDelay);
+            handler.postDelayed(this, DURATION * 3 + STOP_DELAY);
         }
     };
 
