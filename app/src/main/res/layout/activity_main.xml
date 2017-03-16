@@ -4,10 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="@android:color/darker_gray"
-    android:weightSum="5"
-    tools:context="com.xpeppers.waveanimation.MainActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    tools:context="com.xpeppers.waveanimation.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textSize="18sp"
+            android:layout_marginRight="15dp" />
+
+        <com.xpeppers.waveanimation.SegmentedProgressView
+            android:id="@+id/spvLoader"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>

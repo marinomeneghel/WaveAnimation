@@ -3,50 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:gravity="center">
+    android:weightSum="5"
+    android:gravity="center"
+    android:background="@android:color/transparent">
 
     <View
         android:id="@+id/firstView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginRight="5dp"
+        android:background="@color/colorAccent" />
 
     <View
         android:id="@+id/secondView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginRight="5dp"
+        android:background="@color/colorAccent" />
 
     <View
         android:id="@+id/thirdView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginRight="5dp"
+        android:background="@color/colorAccent" />
 
     <View
         android:id="@+id/fourthView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginRight="5dp"
+        android:background="@color/colorAccent" />
 
     <View
         android:id="@+id/fifthView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginRight="5dp"
+        android:background="@color/colorAccent" />
 </LinearLayout>
