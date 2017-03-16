@@ -7,7 +7,7 @@
         android:toXScale="1.0"
         android:repeatMode="reverse"
         android:interpolator="@android:anim/linear_interpolator"
-        android:toYScale="1.5"
+        android:toYScale="2.5"
         android:pivotX="50%"
         android:pivotY="50%"
         android:fillAfter="false"

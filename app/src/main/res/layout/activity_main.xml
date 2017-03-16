@@ -17,13 +17,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/loading"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
             android:layout_marginRight="15dp" />
 
         <com.xpeppers.waveanimation.SegmentedProgressView
             android:id="@+id/spvLoader"
             android:layout_width="100dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </LinearLayout>

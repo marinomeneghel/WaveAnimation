@@ -36,6 +36,20 @@ public class SegmentedProgressView extends LinearLayout {
         handler = new Handler();
     }
 
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+        for (View bar : bars) {
+            int currentHeight = bar.getMeasuredHeight();
+            bar.getLayoutParams().height = currentHeight / 3;
+            bar.invalidate();
+        }
+    }
+
+    public void startAnimation() {
+        handler.postDelayed(runnable, DURATION * 3);
+    }
+
     private void initView(Context context) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -47,10 +61,6 @@ public class SegmentedProgressView extends LinearLayout {
                 findViewById(R.id.fourthView),
                 findViewById(R.id.fifthView)
         };
-    }
-
-    public void startAnimation() {
-        handler.postDelayed(runnable, DURATION * 3);
     }
 
     private void animate(final View view, final int index) {
